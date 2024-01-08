@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  height: 100vh;
+}
+
+.prueba {
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}

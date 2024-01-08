@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    font-family: 'Fraunces', serif;
+}
+
+li { 
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.carrito {
+    height: 40px;
+}
+
+.guitarra {
+    height: 70px;
+    margin-left: -9.5rem;
+}
+.container {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+}
+
+.nav_list {
+    list-style: none;
+}
+
+.nav_link {
+    font-size: 700;
+    text-decoration: none;
+    color: black
+}
+
+.nav_link:hover {
+    text-transform: uppercase;
+}
+
+
