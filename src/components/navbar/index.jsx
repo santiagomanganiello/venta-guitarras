@@ -13,6 +13,9 @@ function NavBar() {
                 <nav className="nav">
                     <ul className={styles.nav_list}>
                         <li>
+                            <a className={styles.nav_link} href="#">Inicio</a>
+                        </li>
+                        <li>
                             <a className={styles.nav_link} href="#">Productos</a>
                         </li>
                         <li>

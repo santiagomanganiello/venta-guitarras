@@ -12,6 +12,7 @@ li {
 
 .carrito {
     height: 40px;
+    align-items: right;
 }
 
 .guitarra {
