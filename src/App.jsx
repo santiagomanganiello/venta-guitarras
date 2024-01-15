@@ -1,20 +1,8 @@
-import { useState } from 'react'
 import './App.css'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
-import NavBar from './components/navbar/index'
+import Home from './pages/Home/Home'
 
 function App() {
-
-  return (
-  <>
-    <NavBar/>
-    <br></br>
-    <ItemListContainer 
-      prueba1={"contenedor1"} 
-      prueba2={"contenedor2"}
-    />
-  </>
-  )
+  return <Home />;
 }
 
 export default App

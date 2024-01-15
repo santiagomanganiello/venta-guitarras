@@ -1,14 +1,16 @@
-function ItemListContainer(props) {
-    return(
-        <>
-    <div>
-    <h3 className="prueba">{props.prueba1} </h3>
-    </div>
-    <div>
-    <h3 className="prueba">{props.prueba2}</h3>    
-    </div>
-    
-    </> )
-} 
+import React, {useState, useEffect} from "react";
+import styles from "./container.module.css";
+import { products } from "../../utils/MockData";
+import ItemList from "../ItemList/ItemList";
+
+    const ItemListContainer = ({}) => {
+        const [items, setItems] = useState ([]);
+        useEffect(() => {
+            setItems(products);
+        }, []);
+
+        /**RETORNO*/
+        return  <ItemList ItemList={items} />;
+    };
 
 export default ItemListContainer;
