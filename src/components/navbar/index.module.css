@@ -1,5 +1,6 @@
 .carrito {
     height: 40px;
+    margin-right: ;
 }
 
 .guitarra {
@@ -20,6 +21,7 @@
 }
 
 .nav_link {
+    padding: 7px;
     font-size: 700;
     text-decoration: none;
     color: black;

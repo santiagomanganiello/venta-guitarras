@@ -19,17 +19,18 @@ const Navbar = () => {
     <div className={styles.container}>
     <div><img src={Logo} className={styles.guitarra}></img></div>
       <div className={styles.nav_list}>
-        <Link to='/products'>All products</Link>
+        <Link to='/products' className={styles.nav_link}>All products</Link>
         {categories.map((category, index) => (
           <Link
             to={`/products/${category}`}
             key={index}
             className={styles.nav_link}
           >
-            {category}
+          {category}
           </Link>
         ))}   
       </div>
+      <div><img src={carrito} className={styles.carrito}></img></div>
     </div>
     </>  
   )
