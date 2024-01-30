@@ -9,7 +9,6 @@ import ItemList from "../ItemList/ItemList";
     const { categoryId } = useParams();
 
         useEffect(() => {
-            console.log('antes de la promesa')
             getProductsAsync().then((products) => {
                 /**filtro de products por la misma category id */
                 if (categoryId) {
