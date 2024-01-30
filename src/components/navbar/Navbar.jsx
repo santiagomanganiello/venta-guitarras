@@ -8,30 +8,30 @@ import { getCategoriesAsync } from '../../utils/MockData'
 const Navbar = () => {
   const [categories, setCategories] = useState([])
 
-  useEffect(() => {
+    useEffect(() => {
     getCategoriesAsync().then((categories) => {
-      setCategories(categories)
-     })
+        setCategories(categories)
+      })
     }, [])
 
     return (
-    <>
-    <div className={styles.container}>
-    <div><img src={Logo} className={styles.guitarra}></img></div>
-      <div className={styles.nav_list}>
-        <Link to='/products' className={styles.nav_link}>All products</Link>
+      <>
+        <div className={styles.container}>
+        <NavLink to='/'><div><img src={Logo} className={styles.guitarra}></img></div></NavLink>
+        <div className={styles.nav_list}>
+        <NavLink to='/products' className={styles.nav_link}>All products</NavLink>
         {categories.map((category, index) => (
-          <Link
+          <NavLink
             to={`/products/${category}`}
             key={index}
             className={styles.nav_link}
           >
           {category}
-          </Link>
+          </NavLink>
         ))}   
+        </div>
+        <div><img src={carrito} className={styles.carrito}></img></div>
       </div>
-      <div><img src={carrito} className={styles.carrito}></img></div>
-    </div>
     </>  
   )
 }

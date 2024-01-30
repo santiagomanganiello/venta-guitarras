@@ -1,3 +1,8 @@
 .App {
   height: 100vh;
 }
+
+.active {
+  background-color: #b57411;
+  border-radius: 20px;
+}
