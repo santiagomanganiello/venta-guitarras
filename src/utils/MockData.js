@@ -1,37 +1,23 @@
-export const products = [
-    {   id: 1,
-        name: "Stratocaster",
-        price: 800,
-        stock: 10,
-        image: "https://http2.mlstatic.com/D_NQ_NP_907719-MLA46346030670_062021-O.webp",
+export const getProducts = () =>  {
+    return new Promise((resolve, reject)=>{
+        setTimeout(() => {
+            resolve(products);
+        }, 4000);
+    });
+};
 
-    } ,
-    {   id: 2,
-        name: "Les Paul",
-        price: 800,
-        stock: 10,
-        image: "https://http2.mlstatic.com/D_NQ_NP_847500-MLA47676820928_092021-O.webp",
+export const getProductsAsync = () => {
+    return fetch('https://fakestoreapi.com/products').then((res) => res.json())
+};
 
-    } ,
-    {   id: 3,
-        name: "Telecaster",
-        price: 800,
-        stock: 10,
-        image: "https://http2.mlstatic.com/D_NQ_NP_606749-MLA46365746591_062021-O.webp",
+export const getProductAsyncById = (id) => {
+    return fetch(`https://fakestoreapi.com/products/${id}`).then((res) =>
+        res.json()
+    )
+}
 
-    } ,
-    {   id: 4,
-        name: "SG",
-        price: 800,
-        stock: 10,
-        image: "https://http2.mlstatic.com/D_NQ_NP_798002-MLA31913042672_082019-O.webp",
-
-    } ,
-    {   id: 5,
-        name: "Jaguar",
-        price: 800,
-        stock: 10,
-        image: "https://http2.mlstatic.com/D_NQ_NP_760935-MLA48760297705_012022-O.webp",
-
-    } ,
-];
+export const getCategoriesAsync = () => {
+    return fetch('https://fakestoreapi.com/products/categories').then((res) =>
+        res.json()
+    )
+}

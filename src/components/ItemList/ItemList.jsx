@@ -11,19 +11,18 @@ const ItemList = ({ ItemList }) => {
                 ({ id, name, price, stock, image }, index)=> {
                     return ( 
                         <Item
-                        key={id}
-                        id={id}
-                        name={name}
-                        price={price}
-                        stock={stock}
-                        image={image}
+                            key={id}
+                            id={id}
+                            name={name}
+                            price={price}
+                            stock={stock}
+                            image={image}
                         />
                     );
                 }
             )}
         </div>
     );
-    
 };
 
 ItemList.propTypes = {};

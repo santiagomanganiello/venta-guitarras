@@ -1,18 +1,28 @@
 .item {
     display: inline-flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    border: 10px solid #323030;
-    max-width: 380px;
-    width: 100%;
-    background-color: white;
+    border: 1px solid #ccc;
+    width: 250px;
+    height: 350px; 
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px; 
+    overflow: hidden; /* Evitará que las imágenes sobresalgan del contenedor */
 } 
 
 .item__image {
-    width: 100%;
-    text-align: center;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow: hidden; 
 }
 
 .item__info {
-    align-items: center;
+    text-align: center;
+    background-color: #b57411;
+    width: 100%;
 }

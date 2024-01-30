@@ -1,23 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: black;
-}
-
-li { 
-    display: inline-block;
-    padding: 0 20px;
-}
-
 .carrito {
     height: 40px;
-    align-items: right;
 }
 
 .guitarra {
     height: 70px;
-    margin-left: -9.5rem;
+    margin-left: -8.5rem;
 }
 .container {
     background-color: white;
@@ -35,7 +22,8 @@ li {
 .nav_link {
     font-size: 700;
     text-decoration: none;
-    color: black
+    color: black;
+    list-style: none;
 }
 
 .nav_link:hover {

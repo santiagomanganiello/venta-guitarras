@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from "./style/item.module.css";
 import PropTypes from "prop-types";
 
@@ -11,7 +12,9 @@ const Item = ({ id, name, price, stock, image }) => {
         <div className={styles.item__info}>
             <h2 className={styles.item__name}>{name}</h2>
             <p className={styles.item__price}>${price}</p>
-            <p className={styles.item__stock}>stock: {stock}</p>
+        </div>
+        <div>
+            <div><button>Ver Mas</button></div>
         </div>
     </div>
     );
