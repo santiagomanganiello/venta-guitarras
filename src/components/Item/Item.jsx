@@ -14,7 +14,7 @@ const Item = ({ id, name, price, stock, image }) => {
             <p className={styles.item__price}>${price}</p>
         </div>
         <div>
-            <Link to={`/products/${id}`}><div><button>Ver Mas</button></div></Link>
+            <Link to={`/product/${id}`}><div><button>Ver Mas</button></div></Link>
         </div>
     </div>
     );

@@ -1,8 +1,9 @@
-import { React , useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getProductAsyncById } from '../../utils/MockData';
 import styles from './style/detail.module.css';
 import ItemDetail from '../ItemDetail/ItemDetail';
+
 
 const ItemDetailConteiner = () => {
     const {item, setItem} = useState()
@@ -10,14 +11,14 @@ const ItemDetailConteiner = () => {
 
     useEffect(() => {
         getProductAsyncById(productId).then((product) => {
-            setItem(product)
-            console.log(product)
+            setItem(product)         
         })
     }, [productId])
+        
+    
 
-    return 
-    <div>aaaa</div>
+    return <ItemDetail item={item}/>
+} 
 
-}
 
 export default ItemDetailConteiner
