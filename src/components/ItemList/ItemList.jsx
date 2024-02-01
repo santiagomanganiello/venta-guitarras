@@ -8,14 +8,14 @@ const ItemList = ({ ItemList }) => {
     return (
         <div className={styles.ItemList}> 
             {ItemList.map(
-                ({ id, name, price, stock, image }, index)=> {
+                ({ id, title, price, description, image }, index)=> {
                     return ( 
                         <Item
                             key={id}
                             id={id}
-                            name={name}
+                            title={title}
                             price={price}
-                            stock={stock}
+                            description={description}
                             image={image}
                         />
                     );
@@ -25,6 +25,16 @@ const ItemList = ({ ItemList }) => {
     );
 };
 
-ItemList.propTypes = {};
+ItemList.propTypes = {
+    itemList: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number,
+            title: PropTypes.string,
+            description: PropTypes.string,
+            price: PropTypes.number,
+            pictureUrl: PropTypes.string,
+        })
+    ),
+};
 
 export default ItemList
