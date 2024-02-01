@@ -1,19 +1,19 @@
 .carrito {
+    padding: 10px;
     height: 40px;
-    margin-right: ;
 }
 
 .guitarra {
-    height: 70px;
-    margin-left: -8.5rem;
+    padding: 15px;
+    height: 85px;
+    text-align: left;
 }
 .container {
     background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 85px;
-    padding: 5px 10%;
+    height: 95px;
 }
 
 .nav_list {
@@ -21,6 +21,7 @@
 }
 
 .nav_link {
+    padding: 5px 10%;
     padding: 7px;
     font-size: 700;
     text-decoration: none;

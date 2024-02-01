@@ -17,7 +17,7 @@ const Navbar = () => {
     return (
       <>
         <div className={styles.container}>
-        <NavLink to='/'><div><img src={Logo} className={styles.guitarra}></img></div></NavLink>
+        <NavLink to='/'><img src={Logo} className={styles.guitarra}></img></NavLink>
         <div className={styles.nav_list}>
         <NavLink to='/products' className={styles.nav_link}>All products</NavLink>
         {categories.map((category, index) => (
