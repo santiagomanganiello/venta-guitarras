@@ -1,0 +1,20 @@
+.box {
+    display: flex;
+    flex-direction: column;
+}
+
+.number {
+    width: 3.5em;
+}
+
+.inputs  {
+    padding: 10px;
+}
+.comprar {
+        padding: 5px 20px;
+        background-color: #b57411;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 5px;
+    }
