@@ -5,7 +5,6 @@ export const getProducts = () =>  {
         }, 4000);
     });
 };
-
 export const getProductsAsync = () => {
     return fetch('https://fakestoreapi.com/products').then((res) => res.json())
 };
@@ -20,4 +19,5 @@ export const getCategoriesAsync = () => {
     return fetch('https://fakestoreapi.com/products/categories').then((res) =>
         res.json()
     )
-}
+}  
+

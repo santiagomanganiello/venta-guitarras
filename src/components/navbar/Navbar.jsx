@@ -9,7 +9,7 @@ const Navbar = () => {
   const [categories, setCategories] = useState([])
 
     useEffect(() => {
-    getCategoriesAsync().then((categories) => {
+      getCategoriesAsync().then((categories) => {
         setCategories(categories)
       })
     }, [])
@@ -19,7 +19,7 @@ const Navbar = () => {
         <div className={styles.container}>
         <Link to='/'><img src={Logo} className={styles.guitarra}></img></Link>
         <div className={styles.nav_list}>
-        <NavLink to='/products' className={styles.nav_link}>All products</NavLink>
+        <Link to='/products' className={styles.nav_link}>All products</Link>
         {categories.map((category, index) => (
           <NavLink
             to={`/products/${category}`}

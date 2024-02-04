@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid #ccc;
+    border: 3px solid #ccc;
     width: 250px;
     height: 380px; 
     border-radius: 15px;
@@ -18,7 +18,7 @@
 }
 
 .item__info {
-    background-color: #b57411;
+    background-color: #fa9200;
     width: 100%;
     border-radius: 10px;
     text-align: center;
@@ -30,7 +30,7 @@
 
 .button {
     padding: 5px 20px;
-    background-color: #b57411;
+    background-color: #fa9200;
     color: white;
     border: none;
     border-radius: 5px;
