@@ -32,7 +32,6 @@ const CartProvider = ({ children }) => {
             })
             setCart(newCart)
         } else {
-            // Aquí utilizamos el callback en setCart para garantizar que estamos utilizando el estado más actualizado del carrito.
             setCart(prevCart => [...prevCart, {item, quantity}])
         }   
     }
