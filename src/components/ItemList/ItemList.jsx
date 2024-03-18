@@ -28,7 +28,7 @@ const ItemList = ({ ItemList }) => {
 ItemList.propTypes = {
     itemList: PropTypes.arrayOf(
         PropTypes.shape({
-            id: PropTypes.number,
+            id: PropTypes.string,
             title: PropTypes.string,
             description: PropTypes.string,
             price: PropTypes.number,

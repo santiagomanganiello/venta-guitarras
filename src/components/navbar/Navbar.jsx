@@ -3,15 +3,18 @@ import Logo from "../../assets/img/logo.png";
 import styles from './index.module.css';
 import { Link, NavLink } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { getCategoriesAsync } from '../../utils/MockData'
+import { useCartContext } from "../../pages/routing/context/cartContext";
+import { db } from "../../firebase/config";
+import { collection, doc, getDoc } from 'firebase/firestore';
+//  import { getCategoriesAsync } from '../../utils/MockData'
 
 const Navbar = () => {
   const [categories, setCategories] = useState([])
-
+  const { ItemsTotal } = useCartContext()
+  
     useEffect(() => {
-      getCategoriesAsync().then((categories) => {
-        setCategories(categories)
-      })
+      const productsCollection = collection(db, 'products')
+        setCategories(['electrica' , 'acustica', 'criolla'])
     }, [])
 
     return (
@@ -30,7 +33,9 @@ const Navbar = () => {
           </NavLink>
         ))}   
         </div>
-        <div><img src={carrito} className={styles.carrito}></img></div>
+          <div>
+            <Link to='/cart'> <img src={carrito} className={styles.carrito}></img></Link><h3 className={styles.carritocount}>{ItemsTotal}</h3>
+          </div>
       </div>
     </>  
   )

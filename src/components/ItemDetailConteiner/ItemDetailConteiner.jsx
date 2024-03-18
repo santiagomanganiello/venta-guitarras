@@ -4,6 +4,8 @@ import { getProductAsyncById } from '../../utils/MockData';
 import styles from './style/detail.module.css';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import Spinner from '../Spinner/Spinner';
+import { collection, doc, getDoc } from 'firebase/firestore';
+import { db } from '../../firebase/config';
 
 
 const ItemDetailConteiner = () => {
@@ -11,10 +13,15 @@ const ItemDetailConteiner = () => {
     const { productId } = useParams()
 
     useEffect(() => {
-        getProductAsyncById(productId).then((product) => {
-            setItem(product)
+        const productsCollection = collection(db, 'products')
+        const refDoc = doc(productsCollection, productId)
+        getDoc(refDoc).then((doc) => {
+            setItem ({...doc.data() })
         })
-    }, [productId])
+        //getProductAsyncById(productId).then((product) => {
+        //    setItem(product)
+       // })
+        }, [productId])
         
     if (item === undefined) {
         return <Spinner />

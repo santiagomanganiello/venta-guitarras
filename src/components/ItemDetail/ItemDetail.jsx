@@ -1,11 +1,14 @@
 import React from 'react';
 import styles from './style/itemdetail.module.css';
 import ItemCount from '../ItemCount/ItemCount';
+import { useCartContext } from '../../pages/routing/context/cartContext'; 
 
 const ItemDetail = ({ item }) => {
     const { title, price, description, image } = item
-const onAdd = (count) => {
+    const { addItem } = useCartContext()
+    const onAdd = (count) => {
     alert(`agregaste ${count} ${title} al carrito`)
+    addItem(item, count)
 }
     return( 
         <div className={styles.item}>

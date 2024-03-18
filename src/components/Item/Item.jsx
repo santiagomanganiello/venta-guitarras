@@ -21,7 +21,7 @@ const Item = ({ id, title, price, description, image }) => {
 };
 
 Item.propTypes = {
-    id: PropTypes.number,
+    id: PropTypes.string,
     title: PropTypes.string,
     description: PropTypes.string,
     price: PropTypes.number,

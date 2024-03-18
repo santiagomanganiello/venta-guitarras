@@ -1,6 +1,7 @@
 .carrito {
     padding: 10px;
     height: 40px;
+    margin-top: -30%;
 }
 
 .guitarra {
@@ -33,4 +34,12 @@
     text-transform: uppercase;
 }
 
+p {
+ color: black;
+}
 
+.carritocount {
+    margin-top: -110%;
+    margin-right: -10%;
+    color: #fa9200;
+}
