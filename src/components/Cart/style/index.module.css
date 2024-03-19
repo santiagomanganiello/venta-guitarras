@@ -1,0 +1,23 @@
+.default {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    background-color: white;
+    border: #fa9200 1px solid;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.finalizar {
+    padding: 3px;
+}
+
+.vaciar {
+    padding: 3px;
+    margin: 5px;
+}
+
+td, th {
+    border: #fa9200 1px solid;
+    padding: 5px;
+}

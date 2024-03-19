@@ -13,20 +13,25 @@ const ItemDetailConteiner = () => {
     const { productId } = useParams()
 
     useEffect(() => {
-        const productsCollection = collection(db, 'products')
-        const refDoc = doc(productsCollection, productId)
-        getDoc(refDoc).then((doc) => {
-            setItem ({...doc.data() })
-        })
-        //getProductAsyncById(productId).then((product) => {
-        //    setItem(product)
-       // })
-        }, [productId])
+        const fetchProduct = async () => {
+            const productsCollection = collection(db, 'products');
+            const refDoc = doc(productsCollection, productId);
+            const docSnap = await getDoc(refDoc);
+            if (docSnap.exists()) {
+                // si el documento existe, configuramos el estado del item con sus datos y su ID
+                setItem({ id: docSnap.id, ...docSnap.data() });
+            } else {
+                console.log("No se encontró el producto con el ID especificado.");
+            }
+        };
+
+        fetchProduct();
+    }, [productId]); 
         
     if (item === undefined) {
         return <Spinner />
     } else {
-        return <ItemDetail item={item} />
+        return <ItemDetail item={item}/>
     }
     
 } 

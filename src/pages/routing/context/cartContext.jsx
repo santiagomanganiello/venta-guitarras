@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react'
+import { createContext, useContext, useState } from 'react';
 
 const cartContext = createContext()
 
@@ -22,29 +22,40 @@ const CartProvider = ({ children }) => {
         setItemsTotal(ItemsTotal + quantity)
         setTotal(total + item.price * quantity)
     
-        if (isInCart(item.id)) {
-            const newCart = cart.map((cartItem) => {
-                if (cartItem.item.id === item.id) {
-                    return {...cartItem, quantity: cartItem.quantity + quantity }
-                } else {
-                    return cartItem 
-                }
-            })
-            setCart(newCart)
-        } else {
-            setCart(prevCart => [...prevCart, {item, quantity}])
-        }   
+        // if (isInCart(item.id)) {
+        //     const newCart = cart.map((cartItem) => {
+        //         if (cartItem.item.id === item.id) {
+        //             return {...cartItem, quantity: cartItem.quantity + quantity }
+        //         } else {
+        //             return cartItem 
+        //         }
+        //     })
+        //     setCart(newCart)
+        // } else {
+        //     setCart(prevCart => [...prevCart, {item, quantity}])
+        // }   
+        setCart(prevCart => [...prevCart, {item, quantity}])
     }
-    const removeItem = (id) => {
+    const removeItem = (itemId) => {
+        const updatedCart = cart.filter(item => item.item.id !== itemId);
+        const removedItem = cart.find(item => item.item.id === itemId);
+    
+        if (removedItem) {
+            setCart(updatedCart);
+            setItemsTotal(ItemsTotal - removedItem.quantity);
+            setTotal(total - removedItem.item.price * removedItem.quantity);
+        }
     }
 
     const clear = () => {
         setCart([])
         setItemsTotal(0)
         setTotal(0)
+        alert("se vació el carrito")
     }
 
     const isInCart = (id) => cart.find((item) => item.item.id === id);
+
     const valorDelContexto = { cart, ItemsTotal, addItem, removeItem, clear, total }
 
     return <Provider value={valorDelContexto}>{children}</Provider>
