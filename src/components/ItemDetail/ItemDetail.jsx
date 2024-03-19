@@ -16,7 +16,6 @@ const ItemDetail = ({ item }) => {
                 <a href={image} target="_blank"><img src={image} alt={title} /></a>
             </div>
             <div className={styles.item__info}>
-                <p> {id} </p>
                 <h1 className={styles.item__name}>{title}</h1>
                 <h3 className={styles.item__price}>price: ${price}</h3>
                 <p className={styles.item__price}>{description}</p>
