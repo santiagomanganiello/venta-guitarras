@@ -35,11 +35,6 @@ import { collection, query, where, getDocs, doc } from "firebase/firestore";
                     })
             }
 
-
-
-
-
-
         //    getProductsAsync().then((products) => {
         //        /**filtro de products por la misma category id */
         //        if (categoryId) {
