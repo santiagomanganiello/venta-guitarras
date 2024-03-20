@@ -21,3 +21,19 @@ td, th {
     border: #fa9200 1px solid;
     padding: 5px;
 }
+
+button {
+    margin: 2px;
+    padding: 7px 20px;
+    background-color: #fa9200;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b56b03;
+    transition: 0.2s;
+
+}
